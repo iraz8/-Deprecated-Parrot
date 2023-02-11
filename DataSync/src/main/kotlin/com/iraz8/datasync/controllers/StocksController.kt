@@ -4,6 +4,7 @@ import com.iraz8.datasync.services.StocksListGetterService
 import com.iraz8.datasync.services.StocksService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
+import yahoofinance.Stock
 import java.math.BigDecimal
 
 @RestController
@@ -25,5 +26,10 @@ class StocksController @Autowired constructor(
     @GetMapping("stocks/prices")
     fun getStocksCurrentPricesList(): HashMap<String, BigDecimal> {
         return this.stocksService.getCurrentPriceAllStocks()
+    }
+
+    @GetMapping("stocks/historical-prices")
+    fun getStocksHistoricalPricesList(): Map<String, Stock> {
+        return this.stocksService.getHistoricalPricesAllStocks()
     }
 }
