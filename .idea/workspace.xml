@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56ab278e-3dbf-46b2-828b-044625384edc" name="Changes" comment="Initial commit">
+    <list default="true" id="56ab278e-3dbf-46b2-828b-044625384edc" name="Changes" comment="Added getHistoricalPricesAllStocks">
+      <change afterPath="$PROJECT_DIR$/DataSync/src/main/kotlin/com/iraz8/datasync/models/HistoricalDividend.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataSync/src/main/kotlin/com/iraz8/datasync/models/HistoricalQuote.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataSync/src/main/kotlin/com/iraz8/datasync/models/HistoricalSplit.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataSync/src/main/kotlin/com/iraz8/datasync/models/StockDividend.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataSync/src/main/kotlin/com/iraz8/datasync/models/StockQuote.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataSync/src/main/kotlin/com/iraz8/datasync/models/StockStats.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataSync/src/main/kotlin/com/iraz8/datasync/models/Stocks.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataSync/src/main/kotlin/com/iraz8/datasync/controllers/StocksController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/DataSync/src/main/kotlin/com/iraz8/datasync/controllers/StocksController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataSync/src/main/kotlin/com/iraz8/datasync/services/StocksService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/DataSync/src/main/kotlin/com/iraz8/datasync/services/StocksService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataSync/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DataSync/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,31 +51,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "openjdk-19",
-    "last_opened_file_path": "/home/razvan/workspace/Parrot",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "spring.configuration.checksum": "48d3fd499a8a3ad1a4ba451e9b5d94ad",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/razvan/workspace/Parrot&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5891033&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;48d3fd499a8a3ad1a4ba451e9b5d94ad&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -95,6 +105,9 @@
       <workItem from="1675978755146" duration="290000" />
       <workItem from="1676138161654" duration="1449000" />
       <workItem from="1676141510185" duration="3083000" />
+      <workItem from="1676226391003" duration="44000" />
+      <workItem from="1676226443458" duration="717000" />
+      <workItem from="1676815019880" duration="5628000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1675805510900</created>
