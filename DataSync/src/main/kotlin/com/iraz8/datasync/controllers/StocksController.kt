@@ -30,6 +30,8 @@ class StocksController @Autowired constructor(
 
     @GetMapping("stocks/historical-prices")
     fun getStocksHistoricalPricesList(): Map<String, Stock> {
-        return this.stocksService.getHistoricalPricesAllStocks()
+        return this.stocksService.getHistoricalPricesAllStocksMap()
     }
+
+
 }

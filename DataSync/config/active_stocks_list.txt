@@ -3,13 +3,13 @@
 #
 # Add here the ticker symbol for every stock you want to follow
 #
-AAPL
-MSFT
-GOOGL
-AMZN
-TSLA
-NVDA
-TSM
-XOM
-ASML
+#AAPL
+#MSFT
+#GOOGL
+#AMZN
+#TSLA
+#NVDA
+#TSM
+#XOM
+#ASML
 INTL
