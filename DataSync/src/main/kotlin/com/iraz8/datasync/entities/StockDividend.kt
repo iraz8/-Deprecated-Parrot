@@ -2,12 +2,14 @@ package com.iraz8.datasync.entities
 
 import jakarta.persistence.Entity
 import jakarta.persistence.Id
+import jakarta.persistence.JoinColumn
 import java.math.BigDecimal
 import java.util.*
 
 @Entity
 class StockDividend {
     @Id
+    @JoinColumn(name = "symbol")
     val symbol: String
     val payDate: Calendar?
     val exDate: Calendar?

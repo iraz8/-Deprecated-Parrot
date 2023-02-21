@@ -10,22 +10,28 @@ class Stock {
     val currency: String?
     val stockExchange: String?
 
-    @OneToOne(mappedBy = "symbol")
+    @OneToOne(cascade = [CascadeType.ALL])
+    @JoinColumn(name = "symbol")
     val quote: StockQuote
 
-    @OneToOne(mappedBy = "symbol")
+    @OneToOne(cascade = [CascadeType.ALL])
+    @JoinColumn(name = "symbol")
     val stats: StockStats
 
-    @OneToOne(mappedBy = "symbol")
+    @OneToOne(cascade = [CascadeType.ALL])
+    @JoinColumn(name = "symbol")
     val dividend: StockDividend
 
-    @OneToMany(mappedBy = "symbol")
+    @OneToMany(cascade = [CascadeType.ALL])
+    @JoinColumn(name = "symbol")
     val history: List<HistoricalQuote>
 
-    @OneToMany(mappedBy = "symbol")
+    @OneToMany(cascade = [CascadeType.ALL])
+    @JoinColumn(name = "symbol")
     val dividendHistory: List<HistoricalDividend>
 
-    @OneToMany(mappedBy = "symbol")
+    @OneToMany(cascade = [CascadeType.ALL])
+    @JoinColumn(name = "symbol")
     val splitHistory: List<HistoricalSplit>
 
     constructor (yahooStock: yahoofinance.Stock) {

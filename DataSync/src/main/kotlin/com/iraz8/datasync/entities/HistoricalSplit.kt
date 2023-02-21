@@ -1,14 +1,16 @@
 package com.iraz8.datasync.entities
 
-import jakarta.persistence.Entity
-import jakarta.persistence.Id
+import jakarta.persistence.*
 import java.math.BigDecimal
 import java.util.*
 
 @Entity
 class HistoricalSplit {
-
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
+    val id: Long? = null
+
+    @JoinColumn(name = "symbol")
     val symbol: String
     val date: Calendar?
     val numerator: BigDecimal?

@@ -1,16 +1,16 @@
 package com.iraz8.datasync.entities
 
-import jakarta.persistence.Entity
-import jakarta.persistence.Id
-import jakarta.persistence.OneToOne
+import jakarta.persistence.*
 import java.math.BigDecimal
 import java.util.*
 
 @Entity
 class HistoricalDividend {
-
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
-    @OneToOne(mappedBy = "symbol")
+    val id: Long? = null
+
+    @JoinColumn(name = "symbol")
     val symbol: String
     val date: Calendar?
     val adjDividend: BigDecimal?

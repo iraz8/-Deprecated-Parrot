@@ -5,7 +5,7 @@ import com.iraz8.datasync.repositories.StocksRepository
 import org.springframework.stereotype.Service
 
 @Service
-class SyncDataService (
+class SyncDataService(
     private val stocksService: StocksService,
     private val stocksRepository: StocksRepository
 ) {
