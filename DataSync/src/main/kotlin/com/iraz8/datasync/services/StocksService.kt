@@ -1,14 +1,15 @@
 package com.iraz8.datasync.services
 
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import yahoofinance.Stock
 import yahoofinance.YahooFinance
 import java.math.BigDecimal
 
 @Service
-class StocksService(
+class StocksService @Autowired constructor(
     private val stocksListGetterService: StocksListGetterService,
-    private val tickerSymbolsList: List<String> = stocksListGetterService.getTickerSymbolsList()
+    private val tickerSymbolsList: List<String> = stocksListGetterService.getTickerSymbolsList(),
 ) {
     fun getCurrentPriceAllStocks(): HashMap<String, BigDecimal> {
         val map = HashMap<String, BigDecimal>()
@@ -16,7 +17,7 @@ class StocksService(
         return map
     }
 
-    fun getHistoricalPricesAllStocks(): Map<String, Stock> {
+    fun getHistoricalPricesAllStocksMap(): Map<String, Stock> {
         return YahooFinance.get(tickerSymbolsList.toTypedArray(), true)
     }
 }
